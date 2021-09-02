@@ -4,6 +4,7 @@
 ### PN2120
 
 def welcome_assignment_answers(question):
+    global answer
    # The student doesn't have to follow the skeleton for this assignment.
    # Another way to implement it is using "case" statements similar to C.
    if question == "Are encoding and encryption the same? - Yes/No":
