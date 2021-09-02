@@ -2,7 +2,7 @@
 ### Input - All eight questions given in the assignment.
 ### Output - The right answer for the specific question.
 ### PN2120
-
+global answer
 def welcome_assignment_answers(question):
    # The student doesn't have to follow the skeleton for this assignment.
    # Another way to implement it is using "case" statements similar to C.
