@@ -20,15 +20,9 @@ def webServer(port=13331):
        f = open(filename[1:], "r")
        outputdata = f.read()
        f.close()
-       #Send one HTTP header line into socket
-       #connectionSocket.send('\n') #blank line - necessary
-       #connectionSocket.send('HTTP/1.1 200 OK\n')
-       #connectionSocket.send('HTTP/1.1 200 OK\r\n\r\n')
-       #connectionSocket.send('Connection: close\n')
-       #connectionSocket.send('Content-Length: 120\n')
-       #connectionSocket.send('Content-Type: text/html\n')
+       
        connectionSocket.send(bytes('HTTP/1.0 200 OK\r\n\r\n','UTF-8'))
-       #Send the content of the requested file to the client
+
        for i in range(0, len(outputdata)):
          connectionSocket.send(outputdata[i].encode())
        connectionSocket.send("\r\n\r\n".encode())
