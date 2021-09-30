@@ -16,13 +16,13 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Fill in end
 
     # Send HELO command and print server response.
-    heloCommand = 'HELLO nyu.edu\r\n'
+    heloCommand = 'HELLO NYU.EDU\r\n'
     clientSocket.send(heloCommand.encode())
     recv1 = clientSocket.recv(1024).decode()
 
     # Send MAIL FROM command and print server response.
     # Fill in start
-    mailfromCommand = 'MAIL FROM: <cal8163@nyu.edu>\r\n'
+    mailfromCommand = 'MAIL FROM: <pn2120@nyu.edu>\r\n'
     clientSocket.send(mailfromCommand.encode())
     recv2 = clientSocket.recv(1024).decode()
     #print(recv2)
