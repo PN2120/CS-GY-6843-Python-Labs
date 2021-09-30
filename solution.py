@@ -16,7 +16,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Fill in end
 
     # Send HELO command and print server response.
-    heloCommand = 'HELLO NYU.EDU\r\n'
+    heloCommand = 'HELO nyu.edu\r\n'
     clientSocket.send(heloCommand.encode())
     recv1 = clientSocket.recv(1024).decode()
 
@@ -63,6 +63,12 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     #print(recv5)
     clientSocket.close()
     # Fill in end
+
+
+
+
+
+
 
 if __name__ == '__main__':
     smtp_client(1025, '127.0.0.1')
