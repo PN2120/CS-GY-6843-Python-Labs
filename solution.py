@@ -1,5 +1,11 @@
-from socket import * import socket
-import os import sys import struct import time import select import binascii
+from socket import * 
+import socket
+import os 
+import sys 
+import struct 
+import time 
+import select 
+import binascii
 # use mac or linux terminal to run code using sudo Python testing.py 
 
 ICMP_ECHO_REQUEST = 8
