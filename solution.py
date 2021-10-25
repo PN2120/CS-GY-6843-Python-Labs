@@ -39,6 +39,7 @@ csum = csum + (csum >> 16)
 answer = ~csum
 answer = answer & 0xffff
 answer = answer >> 8 | (answer << 8 & 0xff00) 
+
 return answer
 
 def build_packet():
