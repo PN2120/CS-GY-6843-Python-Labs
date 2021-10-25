@@ -34,7 +34,8 @@ if countTo < len(str):
     csum = csum + ord(str[len(str) - 1]) 
     csum = csum & 0xffffffff
 
-csum = (csum >> 16) + (csum & 0xffff) csum = csum + (csum >> 16)
+csum = (csum >> 16) + (csum & 0xffff) 
+csum = csum + (csum >> 16)
 answer = ~csum
 answer = answer & 0xffff
 answer = answer >> 8 | (answer << 8 & 0xff00) 
