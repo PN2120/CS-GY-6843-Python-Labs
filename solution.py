@@ -73,7 +73,8 @@ def get_route(hostname):
             mySocket.setsockopt(socket.IPPROTO_IP, socket.IP_TTL, struct.pack('I', ttl)) 
             mySocket.settimeout(TIMEOUT)
             try:
-                d = build_packet() mySocket.sendto(d, (hostname, 0)) t = time.time()
+                d = build_packet() mySocket.sendto(d, (hostname, 0)) 
+                t = time.time()
                 startedSelect = time.time()
                 whatReady = select.select([mySocket], [], [], timeLeft) 
                 howLongInSelect = (time.time() - startedSelect)
